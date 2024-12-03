@@ -7,10 +7,10 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.TransferSubsystem;
 
-public class RunMotorCommand extends Command {
-  /** Creates a new RunMotorCommand. */
+public class MotorBackwardsCommand extends Command {
+   /** Creates a new RunMotorCommand. */
   TransferSubsystem m_transferSubsystem;
-  public RunMotorCommand(TransferSubsystem transferSubsystemParameter) {
+  public MotorBackwardsCommand(TransferSubsystem transferSubsystemParameter) {
     // Use addRequirements() here to declare subsystem dependencies.
     m_transferSubsystem = transferSubsystemParameter;
     addRequirements(m_transferSubsystem);
@@ -23,7 +23,7 @@ public class RunMotorCommand extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_transferSubsystem.runMotor();
+    m_transferSubsystem.runMotorBackwards();
   }
 
   // Called once the command ends or is interrupted.

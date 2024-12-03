@@ -12,11 +12,17 @@ public class TransferSubsystem extends SubsystemBase {
   /** Creates a new TransferSubsystem. */
   public final TalonFX transferMotor;
   public TransferSubsystem(){
-    transferMotor = new TalonFX(0);
+    transferMotor = new TalonFX(60, "canivore");
     transferMotor.setInverted(false);
   }
   public void runMotor(){
-    transferMotor.set(1);
+    transferMotor.set(.5);
+  }
+  public void runMotorBackwards(){
+    transferMotor.set(-.5);
+  }
+  public void stopMotor(){
+    transferMotor.set(0);
   }
   @Override
   public void periodic() {
