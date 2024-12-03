@@ -14,7 +14,7 @@ public class TransferSubsystem extends SubsystemBase {
 
   public TransferSubsystem() {
     transferMotor = new TalonFX(0);
-
+    
     transferMotor.setInverted(false);
   }
 
