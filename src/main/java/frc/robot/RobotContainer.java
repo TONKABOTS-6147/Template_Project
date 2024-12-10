@@ -8,7 +8,7 @@ import frc.robot.subsystems.TransferSubsystem;
 public class RobotContainer {
   private final TransferSubsystem transferSubsystem = new TransferSubsystem();
   private final Joystick driverJoystick = new Joystick(0);
-  private final JoystickButton button1 = new JoystickButton(driverJoystick, 0);
+  private final JoystickButton button1 = new JoystickButton(driverJoystick, 1);
 
 
   public RobotContainer() {

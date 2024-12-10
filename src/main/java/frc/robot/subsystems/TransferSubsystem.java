@@ -6,19 +6,30 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class TransferSubsystem extends SubsystemBase {
   public final TalonFX transferMotor;
+  public final DigitalInput transferSensor;
+
   /** Creates a new TransferSubsystem. */
   public TransferSubsystem() {
-    transferMotor = new TalonFX(0);
+    transferMotor = new TalonFX(60,"canivore_main");
 
     transferMotor.setInverted(true);
+
+    transferSensor = new DigitalInput(0);
   }
  
+
+
   public void waylonExplodes(){
     transferMotor.set(0.75);
+  }
+
+  public void stopMotor(){
+    transferMotor.set(0);
   }
 
   @Override
