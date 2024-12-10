@@ -3,14 +3,17 @@ package frc.robot.subsystems;
 import com.ctre.phoenix6.hardware.DeviceIdentifier;
 import com.ctre.phoenix6.hardware.TalonFX;
 
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class TransferSubsystem extends SubsystemBase {
 
   public final TalonFX transferMotor;
+  public final DigitalInput transferSensor; 
   
   public TransferSubsystem() {
-    transferMotor = new TalonFX(60, "carnivore_main"); 
+    transferMotor = new TalonFX(60, "canivore_main"); 
+    transferSensor = new DigitalInput(2); 
 
     transferMotor.setInverted(false);
   }
@@ -26,9 +29,4 @@ public class TransferSubsystem extends SubsystemBase {
   public void stopMotor(){
     transferMotor.set(0);
   }
-
-  @Override
-  public void periodic() {
-    System.out.println("Motor is running"); 
-  }
-}
+} 
