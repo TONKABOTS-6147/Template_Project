@@ -22,7 +22,7 @@ public class ShooterSubsystem extends SubsystemBase {
 
   
     topMotor.setInverted(false);
-    bottomMotor.setInverted(false);
+    bottomMotor.setInverted(true);
   }
 
 
